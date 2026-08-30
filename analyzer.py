@@ -184,7 +184,7 @@ def read_docx(file_path):
                     text+=cell.text + "\n"
     return text
 
-def read_pdf(file_path):
+def read_resume(file_path):
     if file_path.suffix.lower() +=".pdf":
         read_pdf(file_path)
     elif file_path.suffix.lower() ==".docx":
