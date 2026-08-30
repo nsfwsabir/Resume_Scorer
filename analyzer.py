@@ -174,7 +174,7 @@ def read_docx(file_path):
     
     for table in document.tables:
         for row in table.rows:
-            for cell in rows.cell:
+            for cell in row.cells:
                 if cell.text.strip():
                     text+=cell.text + "\n"
     return text
@@ -308,32 +308,33 @@ for file_path in resume_folder.iterdir():
         "score": result.score,
         "details": result.details
     })
-    all_results.sort(
+all_results.sort(
         key=lambda candidate: candidate["score"],
         reverse=True
     )
-    top_2=all_results[:2]
+top_2=all_results[:2]
+if len(all_results) <=2:
+    bottom_2=[]
+else:
     bottom_2=all_results[-2:]
 
-    print("Top 2 Candidates")
-    for candidate in top_2:
-
-        print(
-            candidate["name"],
-            "-",
-            candidate["score"],
-            "%"
+print("Top 2 Candidates")
+for candidate in top_2:
+    print(
+        candidate["name"],
+        "-",
+        candidate["score"],
+        "%"
         )
-        print(candidate["details"])
+    print(candidate["details"])
 
-    print("Bottom 2 Candidates")
-    for candidate in bottom_2:
-
-        print(
-            candidate["name"],
-            "-",
-            candidate["score"],
-            "%"
+print("Bottom 2 Candidates")
+for candidate in bottom_2:
+    print(
+        candidate["name"],
+        "-",
+        candidate["score"],
+        "%"
         )
-        print(candidate["details"])
+    print(candidate["details"])
 
