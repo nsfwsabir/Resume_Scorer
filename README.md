@@ -404,12 +404,6 @@ git push origin feature/your-feature
 
 6. Open a Pull Request
 
-## License
-
-No license has currently been specified for this repository.
-
-If you intend to allow others to use, modify, and redistribute the project, consider adding an appropriate open-source license.
-
 ## Author
 
 **nsfwsabir**
