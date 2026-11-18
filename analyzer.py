@@ -11,28 +11,24 @@ from docx import Document
 
 
 load_dotenv()
-my_api_key=os.getenv("GROQ_API_KEY")
-
-if not my_api_key:
-    raise ValueError("API Key not found!")
-
-client=Groq(api_key=my_api_key)
 model="openai/gpt-oss-120b"
 
-print("Paste the JOB Description.")
-print("Type END on a new line when finished.\n")
-job_description= ""
-while True:
-    line=input()
-    if line.strip().upper() == "END":
-        break
-    job_description += line + "\n"
+_client=None
+
+def get_client():
+    global _client
+    if _client is None:
+        api_key=os.getenv("GROQ_API_KEY")
+        if not api_key:
+            raise ValueError("API Key not found!")
+        _client=Groq(api_key=api_key)
+    return _client
 
 
 class JobDesc(BaseModel):
     role:str
     required_skills:list[str]
-    preferred_skils:list[str]
+    preferred_skills:list[str]
     minimum_experience: float | None
     educational_requirements: list[str]
     responsibilities: list[str]
@@ -41,7 +37,8 @@ class JobDesc(BaseModel):
 jobdesc_schema= JobDesc.model_json_schema()
 
 
-system_prompt= f"""
+def parse_job_description(job_description):
+    system_prompt= f"""
     You are an expert HR Assisstant
 
     Your job is to analyze job description and extract structured information from them.
@@ -59,31 +56,29 @@ system_prompt= f"""
 
     """
 
-user_prompt= f"""
+    user_prompt= f"""
     Analyze the following job description.
 
     {job_description}
     """
 
-message_system= {
+    message_system= {
     "role": "system",
     "content": system_prompt
     }
-message_user={
+    message_user={
     "role": "user",
     "content": user_prompt
     }
-response_format={
+    response_format={
     "type":"json_object"
     }
 
-messages=[message_system, message_user]
-response=client.chat.completions.create(model=model, messages=messages, response_format=response_format)
-answer=response.choices[0].message.content
-
-
-job_data=json.loads(answer)
-job=JobDesc(**job_data)
+    messages=[message_system, message_user]
+    response=get_client().chat.completions.create(model=model, messages=messages, response_format=response_format)
+    answer=response.choices[0].message.content
+    job_data=json.loads(answer)
+    return JobDesc(**job_data)
 
 class MatchResult(BaseModel):
     score: float
@@ -199,7 +194,7 @@ def parse_resume(resume_text):
     "type":"json_object"
     }
     messages=[message_system, message_user]
-    response=client.chat.completions.create(model=model, messages=messages, response_format=response_format)
+    response=get_client().chat.completions.create(model=model, messages=messages, response_format=response_format)
     raw_output=response.choices[0].message.content
     data=json.loads(raw_output)
     resume= Resume(**data)
@@ -243,64 +238,80 @@ def final_score(job,resume):
     "type":"json_object"
     }
     messages=[message]
-    response=client.chat.completions.create(model=model, messages=messages, response_format=response_format)
+    response=get_client().chat.completions.create(model=model, messages=messages, response_format=response_format)
     data=json.loads(response.choices[0].message.content)
     return MatchResult(**data)
 
 
-resume_folder=Path("resumes")
-all_results=[]
+def main():
+    print("Paste the JOB Description.")
+    print("Type END on a new line when finished.\n")
+    job_description= ""
+    while True:
+        line=input()
+        if line.strip().upper() == "END":
+            break
+        job_description += line + "\n"
 
-for file_path in resume_folder.iterdir():
-    if file_path.suffix.lower() not in [".pdf", ".docx"]:
-        continue
-    print("\n Processing:", file_path.name)
-    resume_text=read_resume(file_path)
-    parsed_resume=parse_resume(resume_text)
-    time.sleep(5)
-    result=final_score(job,parsed_resume)
-    time.sleep(5)
-    print("Score:", result.score)
-    all_results.append({
-        "name": parsed_resume.name,
-        "score": result.score,
-        "matching_skills": result.matching_skills,
-        "missing_skills": result.missing_skills,
-        "experience_requirement_met": result.experience_requirement_met,
-        "verdict": result.verdict
-    })
-all_results.sort(
-        key=lambda candidate: candidate["score"],
-        reverse=True
-    )
-top_2=all_results[:2]
-if len(all_results) <=2:
-    bottom_2=[]
-else:
-    bottom_2=all_results[-2:]
+    job=parse_job_description(job_description)
 
-print("\n===== TOP 2 CANDIDATES =====")
+    resume_folder=Path("resumes")
+    all_results=[]
 
-for candidate in top_2:
-    print(f"\n{candidate['name']} - {candidate['score']}%")
-    print("Matching skills:", candidate["matching_skills"])
-    print("Missing skills:", candidate["missing_skills"])
-    print(
-        "Experience requirement met:",
-        candidate["experience_requirement_met"]
-    )
-    print("Verdict:", candidate["verdict"])
+    for file_path in resume_folder.iterdir():
+        if file_path.suffix.lower() not in [".pdf", ".docx"]:
+            continue
+        print("\n Processing:", file_path.name)
+        resume_text=read_resume(file_path)
+        parsed_resume=parse_resume(resume_text)
+        time.sleep(5)
+        result=final_score(job,parsed_resume)
+        time.sleep(5)
+        print("Score:", result.score)
+        all_results.append({
+            "name": parsed_resume.name,
+            "score": result.score,
+            "matching_skills": result.matching_skills,
+            "missing_skills": result.missing_skills,
+            "experience_requirement_met": result.experience_requirement_met,
+            "verdict": result.verdict
+        })
+    all_results.sort(
+            key=lambda candidate: candidate["score"],
+            reverse=True
+        )
+    top_2=all_results[:2]
+    if len(all_results) <=2:
+        bottom_2=[]
+    else:
+        bottom_2=all_results[-2:]
+
+    print("\n===== TOP 2 CANDIDATES =====")
+
+    for candidate in top_2:
+        print(f"\n{candidate['name']} - {candidate['score']}%")
+        print("Matching skills:", candidate["matching_skills"])
+        print("Missing skills:", candidate["missing_skills"])
+        print(
+            "Experience requirement met:",
+            candidate["experience_requirement_met"]
+        )
+        print("Verdict:", candidate["verdict"])
 
 
-print("\n===== BOTTOM 2 CANDIDATES =====")
+    print("\n===== BOTTOM 2 CANDIDATES =====")
 
-for candidate in bottom_2:
-    print(f"\n{candidate['name']} - {candidate['score']}%")
-    print("Matching skills:", candidate["matching_skills"])
-    print("Missing skills:", candidate["missing_skills"])
-    print(
-        "Experience requirement met:",
-        candidate["experience_requirement_met"]
-    )
-    print("Verdict:", candidate["verdict"])
+    for candidate in bottom_2:
+        print(f"\n{candidate['name']} - {candidate['score']}%")
+        print("Matching skills:", candidate["matching_skills"])
+        print("Missing skills:", candidate["missing_skills"])
+        print(
+            "Experience requirement met:",
+            candidate["experience_requirement_met"]
+        )
+        print("Verdict:", candidate["verdict"])
+
+
+if __name__ == "__main__":
+    main()
 

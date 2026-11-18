@@ -1,0 +1,463 @@
+{
+  "rubric": {
+    "scale": {
+      "high": "70-100",
+      "medium": "40-69",
+      "low": "0-39"
+    },
+    "rule": "Labels answer one question: should a recruiter shortlist this candidate for this job? high = yes, meets the minimum experience and most required skills with professional evidence; medium = worth a screen, transferable background or a notable gap, within about one year of the minimum; low = no, core requirements absent, more than one year short, unrelated domain, or no extractable content. Incidental or coursework-only use of a skill does not count as professional evidence."
+  },
+  "jobs": {
+    "backend_junior": {
+      "title": "Junior Backend Developer (Python)",
+      "text": "Job Title: Junior Backend Developer (Python)\nLocation: Remote\n\nWe are hiring a junior backend developer to help build and maintain our internal APIs.\n\nRequirements:\n- 1+ year of professional Python experience\n- Working knowledge of SQL and relational databases\n- Experience building or consuming REST APIs\n- Familiarity with Git\n- Bachelor's degree in Computer Science or a related field\n\nNice to have:\n- Django or Flask\n- Docker\n\nResponsibilities:\n- Build and maintain REST endpoints\n- Write and review SQL queries\n- Collaborate with the frontend team",
+      "baseline": {
+        "required": {
+          "Python": [
+            "python"
+          ],
+          "SQL": [
+            "sql",
+            "postgres",
+            "postgresql",
+            "mysql",
+            "sqlite",
+            "database"
+          ],
+          "REST APIs": [
+            "rest",
+            "restful",
+            "api",
+            "apis"
+          ],
+          "Git": [
+            "git",
+            "github",
+            "gitlab"
+          ]
+        },
+        "preferred": {
+          "Django or Flask": [
+            "django",
+            "flask"
+          ],
+          "Docker": [
+            "docker",
+            "container",
+            "containers"
+          ]
+        },
+        "min_experience": 1
+      }
+    },
+    "data_analyst": {
+      "title": "Data Analyst",
+      "text": "Role: Data Analyst\nWe need a data analyst to support the growth team with reporting and experimentation.\n\nMust have:\n- 2+ years of experience in an analytics role\n- Advanced SQL\n- Advanced Excel\n- Python with pandas for analysis\n- Experience building data visualizations\n\nPreferred:\n- Tableau or Power BI\n- A background in statistics\n\nEducation: Bachelor's degree.",
+      "baseline": {
+        "required": {
+          "SQL": [
+            "sql",
+            "postgres",
+            "postgresql",
+            "mysql",
+            "bigquery",
+            "snowflake"
+          ],
+          "Excel": [
+            "excel",
+            "spreadsheet",
+            "spreadsheets",
+            "google sheets"
+          ],
+          "Python with pandas": [
+            "python",
+            "pandas"
+          ],
+          "Data visualization": [
+            "visualization",
+            "visualisation",
+            "tableau",
+            "power bi",
+            "powerbi",
+            "dashboard",
+            "dashboards",
+            "chart",
+            "charts"
+          ]
+        },
+        "preferred": {
+          "Tableau or Power BI": [
+            "tableau",
+            "power bi",
+            "powerbi"
+          ],
+          "Statistics": [
+            "statistics",
+            "statistical",
+            "a b test",
+            "a b testing",
+            "experiment",
+            "experiments",
+            "regression"
+          ]
+        },
+        "min_experience": 2
+      }
+    },
+    "frontend_senior": {
+      "title": "Senior Frontend Engineer",
+      "text": "Senior Frontend Engineer\n\nYou will own our customer-facing React application.\n\nWhat we expect:\n- 3+ years of frontend development experience\n- Expert-level JavaScript\n- Production experience with React\n- Strong HTML and CSS skills\n- Bachelor's degree in Computer Science or equivalent practical experience\n\nBonus:\n- TypeScript\n- Next.js\n- Automated testing (Jest, Playwright, or similar)",
+      "baseline": {
+        "required": {
+          "JavaScript": [
+            "javascript",
+            "js",
+            "typescript",
+            "node"
+          ],
+          "React": [
+            "react",
+            "react js",
+            "reactjs"
+          ],
+          "HTML": [
+            "html",
+            "html5"
+          ],
+          "CSS": [
+            "css",
+            "css3",
+            "sass",
+            "tailwind"
+          ]
+        },
+        "preferred": {
+          "TypeScript": [
+            "typescript",
+            "ts"
+          ],
+          "Next.js": [
+            "next js",
+            "nextjs"
+          ],
+          "Automated testing": [
+            "jest",
+            "playwright",
+            "cypress",
+            "testing",
+            "test",
+            "tests"
+          ]
+        },
+        "min_experience": 3
+      }
+    },
+    "ml_engineer": {
+      "title": "Machine Learning Engineer",
+      "text": "Machine Learning Engineer\nBuild and deploy production ML systems for our recommendations team.\n\nRequired:\n- 3+ years of machine learning engineering experience\n- Strong Python\n- Hands-on experience with PyTorch or TensorFlow\n- Solid understanding of classical machine learning\n- Experience with MLOps: model deployment, monitoring, and CI/CD\n\nPreferred:\n- Experience with LLMs\n- Cloud platforms (AWS, GCP, or Azure)\n- Master's degree in a quantitative field",
+      "baseline": {
+        "required": {
+          "Python": [
+            "python"
+          ],
+          "PyTorch or TensorFlow": [
+            "pytorch",
+            "tensorflow",
+            "torch"
+          ],
+          "Machine learning": [
+            "machine learning",
+            "ml",
+            "scikit learn",
+            "sklearn",
+            "scikit"
+          ],
+          "MLOps": [
+            "mlops",
+            "deployment",
+            "deployed",
+            "deploy",
+            "monitoring",
+            "ci cd",
+            "kubernetes",
+            "docker"
+          ]
+        },
+        "preferred": {
+          "LLMs": [
+            "llm",
+            "llms",
+            "large language model",
+            "transformer",
+            "transformers"
+          ],
+          "Cloud": [
+            "aws",
+            "gcp",
+            "azure",
+            "cloud"
+          ]
+        },
+        "min_experience": 3
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "backend-01",
+      "job_id": "backend_junior",
+      "category": "strong_match",
+      "expected_tier": "high",
+      "notes": "2.5 years of Python backend work, all four required skills evidenced, CS degree.",
+      "resume_text": "Arjun Mehta\nBackend Developer\narjun.mehta@example.com | +91 98765 43210\n\nSummary\nBackend developer with 2.5 years of professional experience building Python services.\n\nExperience\nBackend Developer, Finlytics (2023 - present)\n- Built REST APIs with Flask and PostgreSQL.\n- Wrote SQL queries and migrations for a payments product.\n- Used Git for daily development and Docker for local environments.\n\nEducation\nB.Tech in Computer Science, VIT (2022)\n\nSkills\nPython, Flask, SQL, PostgreSQL, REST APIs, Git, Docker"
+    },
+    {
+      "id": "backend-02",
+      "job_id": "backend_junior",
+      "category": "strong_match",
+      "expected_tier": "high",
+      "notes": "1.5 years of Django work, all required skills, relevant degree.",
+      "resume_text": "Sofia Alvarez\nPython Developer\nsofia.alvarez@example.com\n\nExperience\nDjango Developer, BrightCart, 1.5 years\n- Developed REST APIs in Python using Django and Django REST Framework.\n- Designed SQL schemas in MySQL and wrote queries for reporting.\n- Collaborated through GitHub and deployed with Docker.\n\nEducation\nB.Sc. in Information Systems, University of Leeds\n\nSkills\nPython, Django, SQL, REST, Git, Docker"
+    },
+    {
+      "id": "backend-03",
+      "job_id": "backend_junior",
+      "category": "missing_skills",
+      "expected_tier": "medium",
+      "notes": "Meets experience but has no REST API or framework evidence; Python and SQL are solid.",
+      "resume_text": "Noah Williams\nJunior Python Developer\nnoah.williams@example.com\n\nExperience\nJunior Developer, Bluepeak Software, 1 year\n- Maintained Python scripts for internal reporting.\n- Wrote SQL queries against a MySQL database.\n- Used Git for version control.\n\nEducation\nB.S. Computer Science, Oregon State University\n\nSkills\nPython, SQL, Git"
+    },
+    {
+      "id": "backend-04",
+      "job_id": "backend_junior",
+      "category": "transferable_stack",
+      "expected_tier": "medium",
+      "notes": "Java backend engineer with Python only as scripting; keywords present but Python backend delivery is not.",
+      "resume_text": "Priya Nair\nSoftware Engineer\npriya.nair@example.com\n\nExperience\nSoftware Engineer, Trelis Systems, 3 years\n- Built backend services primarily in Java (Spring Boot).\n- Wrote Python automation scripts for data cleanup.\n- Exposed and consumed REST APIs.\n- Used Git and Jenkins for delivery.\n\nEducation\nB.E. in Computer Engineering\n\nSkills\nJava, Spring Boot, Python, SQL, REST APIs, Git"
+    },
+    {
+      "id": "backend-05",
+      "job_id": "backend_junior",
+      "category": "under_experienced",
+      "expected_tier": "medium",
+      "notes": "New grad with a 6-month internship; strong project evidence but half the required year.",
+      "resume_text": "Daniel Kim\nRecent Computer Science Graduate\ndaniel.kim@example.com\n\nExperience\nSoftware Engineering Intern, Nimbus Labs, 0.5 years\n- Built a Flask REST API for a customer feedback tool.\n- Queried PostgreSQL and used Git in a team workflow.\n\nProjects\nCampus Course Scheduler: Python, Flask, SQLite, REST APIs, Git.\n\nEducation\nB.S. Computer Science, UC Davis (2026)\n\nSkills\nPython, Flask, SQL, REST APIs, Git"
+    },
+    {
+      "id": "backend-06",
+      "job_id": "backend_junior",
+      "category": "transferable_stack",
+      "expected_tier": "low",
+      "notes": "Five years of PHP, but no Python; the shared SQL/REST/Git keywords should not rescue this.",
+      "resume_text": "Marco Rossi\nSenior PHP Developer\nmarco.rossi@example.com\n\nExperience\nSenior Developer, WebWorks, 5 years\n- Built and maintained Laravel applications and REST APIs.\n- Designed MySQL schemas and optimized SQL queries.\n- Managed source control in Git.\n\nEducation\nB.Sc. Computer Science\n\nSkills\nPHP, Laravel, MySQL, REST APIs, Git, Docker"
+    },
+    {
+      "id": "backend-07",
+      "job_id": "backend_junior",
+      "category": "unrelated_domain",
+      "expected_tier": "low",
+      "notes": "Marketing coordinator with an intro Python course; no SQL, REST, or backend work.",
+      "resume_text": "Emily Chen\nMarketing Coordinator\nemily.chen@example.com\n\nExperience\nMarketing Coordinator, GreenLeaf Foods, 2 years\n- Managed email campaigns and social media content.\n- Built Excel reports for campaign performance.\n- Completed an introductory Python course.\n\nEducation\nB.A. Communications\n\nSkills\nExcel, Python (beginner), copywriting"
+    },
+    {
+      "id": "backend-08",
+      "job_id": "backend_junior",
+      "category": "empty_extraction",
+      "expected_tier": "low",
+      "notes": "Simulated scanned PDF with no extractable text; any score other than low is unsafe.",
+      "resume_text": ""
+    },
+    {
+      "id": "data-01",
+      "job_id": "data_analyst",
+      "category": "strong_match",
+      "expected_tier": "high",
+      "notes": "Three years in analytics, all required skills, Tableau, statistics, relevant degree.",
+      "resume_text": "Rhea Kapoor\nData Analyst\nrhea.kapoor@example.com\n\nExperience\nData Analyst, ShopStack, 3 years\n- Wrote advanced SQL across PostgreSQL and BigQuery.\n- Built Excel models and automated analyses with Python and pandas.\n- Created Tableau dashboards used by the growth team.\n- Ran A/B tests and applied statistics to interpret results.\n\nEducation\nB.A. Economics, Delhi University\n\nSkills\nSQL, Excel, Python, pandas, Tableau, statistics, A/B testing"
+    },
+    {
+      "id": "data-02",
+      "job_id": "data_analyst",
+      "category": "strong_match",
+      "expected_tier": "high",
+      "notes": "Four years of BI work, all required skills, Power BI and Python visualization.",
+      "resume_text": "Tom Becker\nBusiness Intelligence Analyst\ntom.becker@example.com\n\nExperience\nBI Analyst, Nordwind Retail, 4 years\n- Owned SQL reporting for sales and inventory.\n- Built Power BI dashboards and Excel models for leadership.\n- Used Python (pandas, matplotlib) for ad hoc analysis and visualization.\n\nEducation\nB.B.A. Business Analytics, University of Michigan\n\nSkills\nSQL, Excel, Python, pandas, Power BI, data visualization"
+    },
+    {
+      "id": "data-03",
+      "job_id": "data_analyst",
+      "category": "missing_skills",
+      "expected_tier": "medium",
+      "notes": "Meets experience with Excel and SQL, but no Python; dashboards are Excel-based.",
+      "resume_text": "Lena Fischer\nOperations Analyst\nlena.fischer@example.com\n\nExperience\nOperations Analyst, CityFreight, 2 years\n- Maintained Excel dashboards and weekly performance reports.\n- Wrote SQL queries to pull shipment data.\n- Presented trend analysis to operations managers.\n\nEducation\nB.A. Supply Chain Management\n\nSkills\nExcel, SQL, dashboards, reporting"
+    },
+    {
+      "id": "data-04",
+      "job_id": "data_analyst",
+      "category": "under_experienced",
+      "expected_tier": "medium",
+      "notes": "Strong tool match but 1.5 years against a 2-year minimum.",
+      "resume_text": "Omar Haddad\nJunior Data Analyst\nomar.haddad@example.com\n\nExperience\nJunior Data Analyst, Pulse Media, 1.5 years\n- Queried MySQL and analyzed user behavior with Python and pandas.\n- Built Tableau dashboards for editorial and marketing teams.\n- Automated weekly reports.\n\nEducation\nB.Sc. Statistics\n\nSkills\nSQL, Python, pandas, Tableau, Excel"
+    },
+    {
+      "id": "data-05",
+      "job_id": "data_analyst",
+      "category": "missing_skills",
+      "expected_tier": "medium",
+      "notes": "Three years of finance analytics; SQL and Power BI are strong but Python is absent.",
+      "resume_text": "Isabelle Moreau\nFinancial Analyst\nisabelle.moreau@example.com\n\nExperience\nFinancial Analyst, Ardent Capital, 3 years\n- Built Excel forecasting models and monthly financial reports.\n- Wrote SQL queries for revenue analysis.\n- Created Power BI dashboards for portfolio performance.\n\nEducation\nB.Com. Finance\n\nSkills\nExcel, SQL, Power BI, financial modeling"
+    },
+    {
+      "id": "data-06",
+      "job_id": "data_analyst",
+      "category": "unrelated_domain",
+      "expected_tier": "low",
+      "notes": "QA tester with basic SQL; no Python, no analytics or visualization work.",
+      "resume_text": "Kevin Osei\nQA Tester\nkevin.osei@example.com\n\nExperience\nQA Tester, GameForge, 2 years\n- Manual and exploratory testing for mobile games.\n- Wrote basic SQL queries to verify test data.\n- Logged bugs in Jira and tracked releases.\n\nEducation\nB.Sc. Information Technology\n\nSkills\nManual testing, SQL (basic), Jira, Excel"
+    },
+    {
+      "id": "data-07",
+      "job_id": "data_analyst",
+      "category": "unrelated_domain",
+      "expected_tier": "low",
+      "notes": "Social media manager; Excel reporting only, no SQL, Python, or visualization tools.",
+      "resume_text": "Mia Johnson\nSocial Media Manager\nmia.johnson@example.com\n\nExperience\nSocial Media Manager, Brightside Agency, 1 year\n- Planned content calendars and managed paid social campaigns.\n- Reported engagement metrics in Excel.\n- Designed graphics in Canva.\n\nEducation\nB.A. Media Studies\n\nSkills\nSocial media, Excel, Canva, copywriting"
+    },
+    {
+      "id": "data-08",
+      "job_id": "data_analyst",
+      "category": "keyword_stuffing",
+      "expected_tier": "low",
+      "notes": "Every tool is listed, but only from coursework and projects; zero professional experience.",
+      "resume_text": "Alex Petrov\nAspiring Data Analyst\nalex.petrov@example.com\n\nEducation\nB.Sc. Data Science, University of Toronto (2026)\n\nProjects\n- Course project: analyzed public transit data with Python, pandas, and SQL.\n- Built a Tableau dashboard of city bike-share usage.\n\nSkills\nSQL, Python, pandas, Excel, Tableau, data visualization\n\nNote: No professional work experience yet; skills are from coursework and projects."
+    },
+    {
+      "id": "frontend-01",
+      "job_id": "frontend_senior",
+      "category": "strong_match",
+      "expected_tier": "high",
+      "notes": "Five years of React/TypeScript, Next.js, tests, CS degree.",
+      "resume_text": "Grace Liu\nSenior Frontend Engineer\ngrace.liu@example.com\n\nExperience\nSenior Frontend Engineer, Lumen Health, 5 years\n- Built and owned React applications in TypeScript.\n- Developed server-rendered pages with Next.js.\n- Wrote Jest and Playwright tests for critical flows.\n- Implemented accessible HTML and CSS design systems.\n\nEducation\nB.S. Computer Science, Purdue University\n\nSkills\nJavaScript, TypeScript, React, Next.js, HTML, CSS, Jest, Playwright"
+    },
+    {
+      "id": "frontend-02",
+      "job_id": "frontend_senior",
+      "category": "strong_match",
+      "expected_tier": "high",
+      "notes": "3.5 years of React, TypeScript, HTML/CSS, Playwright; degree equivalence is practical experience.",
+      "resume_text": "Hugo Martins\nFrontend Developer\nhugo.martins@example.com\n\nExperience\nFrontend Developer, Tileshop, 3.5 years\n- Built React storefront features in JavaScript and TypeScript.\n- Styled responsive interfaces with HTML and CSS.\n- Added end-to-end testing with Playwright.\n\nEducation\nFull-stack bootcamp certificate; B.A. Graphic Design\n\nSkills\nJavaScript, TypeScript, React, HTML, CSS, Playwright"
+    },
+    {
+      "id": "frontend-03",
+      "job_id": "frontend_senior",
+      "category": "missing_skills",
+      "expected_tier": "medium",
+      "notes": "Strong Angular engineer with the right depth but no React production experience.",
+      "resume_text": "Anika Rao\nFrontend Developer\nanika.rao@example.com\n\nExperience\nFrontend Developer, Cloudline, 4 years\n- Built enterprise dashboards with Angular and TypeScript.\n- Wrote semantic HTML and scalable CSS.\n- Worked with JavaScript for shared utilities.\n\nEducation\nB.Tech in Information Technology\n\nSkills\nAngular, TypeScript, JavaScript, HTML, CSS"
+    },
+    {
+      "id": "frontend-04",
+      "job_id": "frontend_senior",
+      "category": "under_experienced",
+      "expected_tier": "medium",
+      "notes": "Solid React fundamentals but exactly one year below the senior minimum.",
+      "resume_text": "Ben Carter\nReact Developer\nben.carter@example.com\n\nExperience\nReact Developer, AppNest, 2 years\n- Built customer-facing features in React and JavaScript.\n- Converted Figma designs into responsive HTML and CSS.\n- Fixed accessibility issues.\n\nEducation\nB.Sc. Computer Science\n\nSkills\nReact, JavaScript, HTML, CSS, Git"
+    },
+    {
+      "id": "frontend-05",
+      "job_id": "frontend_senior",
+      "category": "transferable_stack",
+      "expected_tier": "medium",
+      "notes": "Six years in UI design with HTML/CSS/JS prototypes; no React or frontend engineering role.",
+      "resume_text": "Yuki Tanaka\nUI/UX Designer\nyuki.tanaka@example.com\n\nExperience\nUI/UX Designer, Kite Studio, 6 years\n- Designed web interfaces and design systems.\n- Built HTML/CSS prototypes and added light JavaScript interactions.\n- Collaborated with engineers on implementation.\n\nEducation\nB.F.A. Interaction Design\n\nSkills\nHTML, CSS, JavaScript, Figma, design systems"
+    },
+    {
+      "id": "frontend-06",
+      "job_id": "frontend_senior",
+      "category": "missing_skills",
+      "expected_tier": "low",
+      "notes": "One year of Node.js backend work; no React, HTML, or CSS, and below the experience minimum.",
+      "resume_text": "Diego Santos\nBackend Developer\ndiego.santos@example.com\n\nExperience\nBackend Developer, Freightly, 1 year\n- Built Node.js services and REST APIs in JavaScript.\n- Worked with PostgreSQL and Git.\n\nEducation\nB.Sc. Computer Engineering\n\nSkills\nNode.js, JavaScript, PostgreSQL, Git"
+    },
+    {
+      "id": "frontend-07",
+      "job_id": "frontend_senior",
+      "category": "unrelated_domain",
+      "expected_tier": "low",
+      "notes": "WordPress content editor with basic HTML; no JavaScript or React.",
+      "resume_text": "Rachel Green\nContent Editor\nrachel.green@example.com\n\nExperience\nContent Editor, WordHive, 3 years\n- Edited and published WordPress articles.\n- Made minor HTML edits to post layouts.\n- Coordinated freelancers.\n\nEducation\nB.A. English\n\nSkills\nWordPress, HTML (basic), editing"
+    },
+    {
+      "id": "frontend-08",
+      "job_id": "frontend_senior",
+      "category": "weak_evidence",
+      "expected_tier": "low",
+      "notes": "Java engineer who touched HTML/CSS for admin screens; no JavaScript or React portfolio.",
+      "resume_text": "Victor Huang\nJava Engineer\nvictor.huang@example.com\n\nExperience\nSoftware Engineer, CoreLink, 4 years\n- Built enterprise services in Java and Spring.\n- Used HTML and CSS for internal admin screens.\n- Wrote SQL queries and maintained Git repositories.\n\nEducation\nB.S. Software Engineering\n\nSkills\nJava, Spring, SQL, HTML, CSS, Git"
+    },
+    {
+      "id": "ml-01",
+      "job_id": "ml_engineer",
+      "category": "strong_match",
+      "expected_tier": "high",
+      "notes": "Five years of production PyTorch, MLOps, cloud, LLMs, MS degree.",
+      "resume_text": "Nadia Rahman\nMachine Learning Engineer\nnadia.rahman@example.com\n\nExperience\nML Engineer, VisionWorks, 5 years\n- Trained and served PyTorch models for image ranking.\n- Built MLOps pipelines with Docker, Kubernetes, MLflow, and CI/CD.\n- Deployed models on AWS with monitoring and rollback.\n- Fine-tuned LLMs for internal search.\n\nEducation\nM.S. Computer Science, Georgia Tech\n\nSkills\nPython, PyTorch, machine learning, MLOps, AWS, LLMs"
+    },
+    {
+      "id": "ml-02",
+      "job_id": "ml_engineer",
+      "category": "strong_match",
+      "expected_tier": "high",
+      "notes": "Three years of TensorFlow and classical ML with deployment, monitoring, and GCP; MS.",
+      "resume_text": "Samir Patel\nML Engineer\nsamir.patel@example.com\n\nExperience\nML Engineer, Forecast Labs, 3 years\n- Built demand forecasting models with TensorFlow and classical machine learning.\n- Deployed and monitored models on GCP using CI/CD.\n- Owned feature pipelines in Python.\n\nEducation\nM.S. Statistics, University of Washington\n\nSkills\nPython, TensorFlow, machine learning, MLOps, GCP, deployment, monitoring"
+    },
+    {
+      "id": "ml-03",
+      "job_id": "ml_engineer",
+      "category": "missing_skills",
+      "expected_tier": "medium",
+      "notes": "Four years of data science with Python and ML, but no PyTorch/TensorFlow or MLOps.",
+      "resume_text": "Clara Jensen\nData Scientist\nclara.jensen@example.com\n\nExperience\nData Scientist, RetailPulse, 4 years\n- Built scikit-learn models for churn and propensity.\n- Ran experiments and analyzed results in Python.\n- Presented findings to product teams.\n\nEducation\nM.S. Data Science\n\nSkills\nPython, scikit-learn, machine learning, statistics, SQL"
+    },
+    {
+      "id": "ml-04",
+      "job_id": "ml_engineer",
+      "category": "under_experienced",
+      "expected_tier": "medium",
+      "notes": "Relevant PyTorch and deployment work but only two years against a three-year minimum.",
+      "resume_text": "Ethan Brooks\nML Engineer\nethan.brooks@example.com\n\nExperience\nML Engineer, VoiceLayer, 2 years\n- Trained speech models in PyTorch.\n- Packaged models in Docker and deployed to a staging environment.\n- Monitored inference latency.\n\nEducation\nB.S. Computer Science\n\nSkills\nPython, PyTorch, machine learning, Docker, deployment"
+    },
+    {
+      "id": "ml-05",
+      "job_id": "ml_engineer",
+      "category": "transferable_stack",
+      "expected_tier": "medium",
+      "notes": "Six years of Python backend work plus ML coursework and personal projects, no production ML or MLOps.",
+      "resume_text": "Wei Zhang\nBackend Engineer\nwei.zhang@example.com\n\nExperience\nBackend Engineer, DataHarbor, 6 years\n- Built Python data services and internal APIs.\n- Completed machine learning coursework and personal PyTorch projects.\n- No production model deployment experience.\n\nEducation\nB.E. Software Engineering\n\nSkills\nPython, SQL, PyTorch (projects), machine learning (coursework), Docker"
+    },
+    {
+      "id": "ml-06",
+      "job_id": "ml_engineer",
+      "category": "cross_language",
+      "expected_tier": "low",
+      "notes": "Data annotator with a Portuguese resume; no Python or ML engineering evidence.",
+      "resume_text": "João Silva\nAnotador de Dados\njoao.silva@example.com\n\nExperiência\nAnotador de Dados, DataLabel, 2 anos\n- Rotulei imagens e textos para modelos de aprendizado de máquina.\n- Usei planilhas Excel para controle de qualidade.\n- Segui diretrizes de anotação em português.\n\nEducação\nBacharelado em Administração\n\nHabilidades\nAnotação de dados, Excel, controle de qualidade"
+    },
+    {
+      "id": "ml-07",
+      "job_id": "ml_engineer",
+      "category": "unrelated_domain",
+      "expected_tier": "low",
+      "notes": "Biology research assistant with Python data cleaning; no ML models or deployment.",
+      "resume_text": "Aisha Bello\nResearch Assistant\naisha.bello@example.com\n\nExperience\nResearch Assistant, University Biology Lab, 1 year\n- Cleaned experimental data with Python scripts.\n- Ran statistical tests with SciPy.\n- Documented results in reports.\n\nEducation\nB.Sc. Biology\n\nSkills\nPython, statistics, SciPy, data cleaning"
+    },
+    {
+      "id": "ml-08",
+      "job_id": "ml_engineer",
+      "category": "weak_evidence",
+      "expected_tier": "low",
+      "notes": "Frontend engineer with TensorFlow tutorials only; no production ML or MLOps.",
+      "resume_text": "Lucas Meyer\nFrontend Developer\nlucas.meyer@example.com\n\nExperience\nFrontend Developer, Orbit Media, 4 years\n- Built React and TypeScript web applications.\n- Completed TensorFlow tutorials and a personal image classifier.\n- No production machine learning experience.\n\nEducation\nB.Sc. Media Informatics\n\nSkills\nReact, TypeScript, JavaScript, TensorFlow (tutorials), Python"
+    }
+  ]
+}

@@ -148,6 +148,12 @@ Resume_Scorer/
 ├── .python-version
 ├── .gitignore
 ├── README.md
+├── EVALUATION.md
+│
+├── eval/
+│   ├── test_set.json
+│   ├── run_eval.py
+│   └── results.json
 │
 └── resumes/
     ├── candidate1.pdf
@@ -310,6 +316,74 @@ Jane Smith - 74.0%
 ...
 ```
 
+## Input / Output Contract
+
+### Inputs
+
+| Input | Where | Required | Rules |
+|---|---|---|---|
+| Job description | stdin | Yes | Multi-line text. A line that is exactly `END` (case-insensitive, surrounding whitespace ignored) ends input. Empty input is not rejected. |
+| Resumes | `resumes/` in the working directory | Yes (may be empty) | Only `.pdf` and `.docx`; other extensions are skipped. Files are processed in directory order, not sorted. Subdirectories are not scanned. |
+| Groq API key | `GROQ_API_KEY` in the environment or `.env` in the working directory | Yes | Checked lazily at the first LLM call. Missing key raises `ValueError` and aborts. |
+| Model | hard-coded | — | `openai/gpt-oss-120b`. Not configurable by CLI or environment. |
+
+The application takes no command-line arguments. Each resume is evaluated independently against the same parsed job description; candidates are never compared with each other beyond the final sort.
+
+### Processing
+
+- Job description text → one LLM extraction call → `JobDesc`.
+- Each resume file → text extraction (`pypdf` or `python-docx`) → one LLM parsing call → `Resume`.
+- Each `Resume` + `JobDesc` → one LLM scoring call → `MatchResult`.
+- The tool sleeps 5 seconds after each resume parse and each score.
+
+PDF extraction reads only the text layer; scanned/image-only PDFs produce empty or partial text and are not OCR'd. DOCX extraction reads paragraphs and tables only (not headers, footers, or text boxes).
+
+### Outputs
+
+The tool writes **only to stdout**. It does not create reports, JSON, or any other file, and it does not persist partial results.
+
+Per-resume progress:
+
+```text
+ Processing: <filename>
+Score: <float>
+```
+
+Final ranking:
+
+```text
+===== TOP 2 CANDIDATES =====
+
+<name> - <score>%
+Matching skills: <list>
+Missing skills: <list>
+Experience requirement met: <bool>
+Verdict: <text>
+
+===== BOTTOM 2 CANDIDATES =====
+
+<name> - <score>%
+...
+```
+
+Output semantics:
+
+| Field | Meaning |
+|---|---|
+| `score` | LLM-generated match percentage, 0–100. Higher is better. Not calibrated and not a probability. |
+| `TOP 2` | The two highest scores, always printed (fewer if fewer resumes). |
+| `BOTTOM 2` | The two lowest scores, printed only when more than two resumes exist; otherwise the heading is printed with no entries. |
+| `name` | Candidate name as parsed by the LLM; `None` if extraction failed or the resume is unreadable. |
+| `Matching / missing skills` | LLM judgment, not computed from the keyword baseline. |
+| `Experience requirement met` | LLM judgment against `minimum_experience` from the job description. |
+
+### Failure behaviour
+
+- There are no retries on API errors, rate limits, malformed JSON, or schema validation failures.
+- Any unhandled error aborts the run with a traceback and a non-zero exit code.
+- Resumes already processed are lost because results are held in memory only.
+- A zero-resume folder is not an error: both ranking sections print empty and the process exits 0.
+
 ## Data Models
 
 ### Job Description
@@ -361,6 +435,24 @@ The current implementation uses the LLM to evaluate the overall candidate-job ma
 The score is intended as a screening aid rather than a definitive hiring decision.
 
 A higher score indicates that the candidate's resume is more closely aligned with the requirements extracted from the job description.
+
+## Evaluation
+
+The system is evaluated on a fixed, labeled set rather than on the four sample resumes.
+
+- **Test set:** [`eval/test_set.json`](eval/test_set.json) — 32 resume/JD pairs across 4 roles (8 each), labeled `high`, `medium`, or `low` for shortlisting. It includes edge cases: empty/scanned text, keyword stuffing, under-experienced candidates, transferable stacks, unrelated domains, and a non-English resume.
+- **Baseline:** a deterministic keyword scorer using required/preferred skill coverage and a years regex, mapped to the same 0–100 scale and tier cutoffs.
+- **Harness:** [`eval/run_eval.py`](eval/run_eval.py). It reports tier accuracy, macro F1, Spearman rank correlation, mean band error, severe errors (two tiers off), and high false positives (a `low` candidate predicted `high`).
+
+Protocol, results, baseline comparison, and error analysis: **[EVALUATION.md](EVALUATION.md)**.
+
+On the 32-item set, the LLM pipeline reaches **75.0% tier accuracy** versus **62.5%** for the keyword baseline (macro F1 0.750 vs 0.626; Spearman 0.892 vs 0.842). All errors by both systems are over-predictions, never under-predictions.
+
+```bash
+python eval/run_eval.py --system baseline   # no API key needed
+python eval/run_eval.py                     # baseline + LLM, needs GROQ_API_KEY
+python eval/run_eval.py --self-check        # assert-based checks of the metric code
+```
 
 ## Important Considerations
 

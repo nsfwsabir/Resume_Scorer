@@ -1,0 +1,1362 @@
+{
+  "generated_at": "2026-11-18T18:12:40+00:00",
+  "test_set": "eval/test_set.json",
+  "n_items": 32,
+  "n_evaluated": 32,
+  "baseline": {
+    "records": [
+      {
+        "id": "backend-01",
+        "job_id": "backend_junior",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "predicted_tier": "high",
+        "score": 100.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 1.0,
+        "years_experience": 2.5,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "backend-02",
+        "job_id": "backend_junior",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "predicted_tier": "high",
+        "score": 100.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 1.0,
+        "years_experience": 1.5,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "backend-03",
+        "job_id": "backend_junior",
+        "category": "missing_skills",
+        "expected_tier": "medium",
+        "predicted_tier": "medium",
+        "score": 62.5,
+        "required_coverage": 0.75,
+        "preferred_coverage": 0.0,
+        "years_experience": 1.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "backend-04",
+        "job_id": "backend_junior",
+        "category": "transferable_stack",
+        "expected_tier": "medium",
+        "predicted_tier": "high",
+        "score": 80.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 0.0,
+        "years_experience": 3.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "backend-05",
+        "job_id": "backend_junior",
+        "category": "under_experienced",
+        "expected_tier": "medium",
+        "predicted_tier": "high",
+        "score": 80.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 0.5,
+        "years_experience": 0.5,
+        "experience_met": false,
+        "error": null
+      },
+      {
+        "id": "backend-06",
+        "job_id": "backend_junior",
+        "category": "transferable_stack",
+        "expected_tier": "low",
+        "predicted_tier": "high",
+        "score": 72.5,
+        "required_coverage": 0.75,
+        "preferred_coverage": 0.5,
+        "years_experience": 5.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "backend-07",
+        "job_id": "backend_junior",
+        "category": "unrelated_domain",
+        "expected_tier": "low",
+        "predicted_tier": "low",
+        "score": 27.5,
+        "required_coverage": 0.25,
+        "preferred_coverage": 0.0,
+        "years_experience": 2.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "backend-08",
+        "job_id": "backend_junior",
+        "category": "empty_extraction",
+        "expected_tier": "low",
+        "predicted_tier": "low",
+        "score": 0.0,
+        "required_coverage": 0.0,
+        "preferred_coverage": 0.0,
+        "years_experience": 0.0,
+        "experience_met": false,
+        "error": null
+      },
+      {
+        "id": "data-01",
+        "job_id": "data_analyst",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "predicted_tier": "high",
+        "score": 100.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 1.0,
+        "years_experience": 3.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "data-02",
+        "job_id": "data_analyst",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "predicted_tier": "high",
+        "score": 90.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 0.5,
+        "years_experience": 4.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "data-03",
+        "job_id": "data_analyst",
+        "category": "missing_skills",
+        "expected_tier": "medium",
+        "predicted_tier": "medium",
+        "score": 62.5,
+        "required_coverage": 0.75,
+        "preferred_coverage": 0.0,
+        "years_experience": 2.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "data-04",
+        "job_id": "data_analyst",
+        "category": "under_experienced",
+        "expected_tier": "medium",
+        "predicted_tier": "high",
+        "score": 90.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 1.0,
+        "years_experience": 1.5,
+        "experience_met": false,
+        "error": null
+      },
+      {
+        "id": "data-05",
+        "job_id": "data_analyst",
+        "category": "missing_skills",
+        "expected_tier": "medium",
+        "predicted_tier": "high",
+        "score": 72.5,
+        "required_coverage": 0.75,
+        "preferred_coverage": 0.5,
+        "years_experience": 3.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "data-06",
+        "job_id": "data_analyst",
+        "category": "unrelated_domain",
+        "expected_tier": "low",
+        "predicted_tier": "medium",
+        "score": 45.0,
+        "required_coverage": 0.5,
+        "preferred_coverage": 0.0,
+        "years_experience": 2.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "data-07",
+        "job_id": "data_analyst",
+        "category": "unrelated_domain",
+        "expected_tier": "low",
+        "predicted_tier": "low",
+        "score": 17.5,
+        "required_coverage": 0.25,
+        "preferred_coverage": 0.0,
+        "years_experience": 1.0,
+        "experience_met": false,
+        "error": null
+      },
+      {
+        "id": "data-08",
+        "job_id": "data_analyst",
+        "category": "keyword_stuffing",
+        "expected_tier": "low",
+        "predicted_tier": "high",
+        "score": 80.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 0.5,
+        "years_experience": 0.0,
+        "experience_met": false,
+        "error": null
+      },
+      {
+        "id": "frontend-01",
+        "job_id": "frontend_senior",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "predicted_tier": "high",
+        "score": 100.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 1.0,
+        "years_experience": 5.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "frontend-02",
+        "job_id": "frontend_senior",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "predicted_tier": "high",
+        "score": 93.3,
+        "required_coverage": 1.0,
+        "preferred_coverage": 0.667,
+        "years_experience": 3.5,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "frontend-03",
+        "job_id": "frontend_senior",
+        "category": "missing_skills",
+        "expected_tier": "medium",
+        "predicted_tier": "medium",
+        "score": 69.2,
+        "required_coverage": 0.75,
+        "preferred_coverage": 0.333,
+        "years_experience": 4.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "frontend-04",
+        "job_id": "frontend_senior",
+        "category": "under_experienced",
+        "expected_tier": "medium",
+        "predicted_tier": "high",
+        "score": 70.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 0.0,
+        "years_experience": 2.0,
+        "experience_met": false,
+        "error": null
+      },
+      {
+        "id": "frontend-05",
+        "job_id": "frontend_senior",
+        "category": "transferable_stack",
+        "expected_tier": "medium",
+        "predicted_tier": "medium",
+        "score": 62.5,
+        "required_coverage": 0.75,
+        "preferred_coverage": 0.0,
+        "years_experience": 6.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "frontend-06",
+        "job_id": "frontend_senior",
+        "category": "missing_skills",
+        "expected_tier": "low",
+        "predicted_tier": "low",
+        "score": 17.5,
+        "required_coverage": 0.25,
+        "preferred_coverage": 0.0,
+        "years_experience": 1.0,
+        "experience_met": false,
+        "error": null
+      },
+      {
+        "id": "frontend-07",
+        "job_id": "frontend_senior",
+        "category": "unrelated_domain",
+        "expected_tier": "low",
+        "predicted_tier": "low",
+        "score": 27.5,
+        "required_coverage": 0.25,
+        "preferred_coverage": 0.0,
+        "years_experience": 3.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "frontend-08",
+        "job_id": "frontend_senior",
+        "category": "weak_evidence",
+        "expected_tier": "low",
+        "predicted_tier": "medium",
+        "score": 45.0,
+        "required_coverage": 0.5,
+        "preferred_coverage": 0.0,
+        "years_experience": 4.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "ml-01",
+        "job_id": "ml_engineer",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "predicted_tier": "high",
+        "score": 100.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 1.0,
+        "years_experience": 5.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "ml-02",
+        "job_id": "ml_engineer",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "predicted_tier": "high",
+        "score": 90.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 0.5,
+        "years_experience": 3.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "ml-03",
+        "job_id": "ml_engineer",
+        "category": "missing_skills",
+        "expected_tier": "medium",
+        "predicted_tier": "medium",
+        "score": 45.0,
+        "required_coverage": 0.5,
+        "preferred_coverage": 0.0,
+        "years_experience": 4.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "ml-04",
+        "job_id": "ml_engineer",
+        "category": "under_experienced",
+        "expected_tier": "medium",
+        "predicted_tier": "high",
+        "score": 70.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 0.0,
+        "years_experience": 2.0,
+        "experience_met": false,
+        "error": null
+      },
+      {
+        "id": "ml-05",
+        "job_id": "ml_engineer",
+        "category": "transferable_stack",
+        "expected_tier": "medium",
+        "predicted_tier": "high",
+        "score": 80.0,
+        "required_coverage": 1.0,
+        "preferred_coverage": 0.0,
+        "years_experience": 6.0,
+        "experience_met": true,
+        "error": null
+      },
+      {
+        "id": "ml-06",
+        "job_id": "ml_engineer",
+        "category": "cross_language",
+        "expected_tier": "low",
+        "predicted_tier": "low",
+        "score": 0.0,
+        "required_coverage": 0.0,
+        "preferred_coverage": 0.0,
+        "years_experience": 0.0,
+        "experience_met": false,
+        "error": null
+      },
+      {
+        "id": "ml-07",
+        "job_id": "ml_engineer",
+        "category": "unrelated_domain",
+        "expected_tier": "low",
+        "predicted_tier": "low",
+        "score": 17.5,
+        "required_coverage": 0.25,
+        "preferred_coverage": 0.0,
+        "years_experience": 1.0,
+        "experience_met": false,
+        "error": null
+      },
+      {
+        "id": "ml-08",
+        "job_id": "ml_engineer",
+        "category": "weak_evidence",
+        "expected_tier": "low",
+        "predicted_tier": "medium",
+        "score": 62.5,
+        "required_coverage": 0.75,
+        "preferred_coverage": 0.0,
+        "years_experience": 4.0,
+        "experience_met": true,
+        "error": null
+      }
+    ],
+    "metrics": {
+      "n": 32,
+      "errors": 0,
+      "accuracy": 0.625,
+      "macro_f1": 0.626,
+      "spearman": 0.842,
+      "mean_band_error": 0.438,
+      "severe_errors": 2,
+      "high_false_positives": 2,
+      "per_class": {
+        "low": {
+          "precision": 1.0,
+          "recall": 0.583,
+          "f1": 0.737,
+          "support": 12
+        },
+        "medium": {
+          "precision": 0.625,
+          "recall": 0.417,
+          "f1": 0.5,
+          "support": 12
+        },
+        "high": {
+          "precision": 0.471,
+          "recall": 1.0,
+          "f1": 0.64,
+          "support": 8
+        }
+      },
+      "confusion": {
+        "low": {
+          "low": 7,
+          "medium": 3,
+          "high": 2
+        },
+        "medium": {
+          "low": 0,
+          "medium": 5,
+          "high": 7
+        },
+        "high": {
+          "low": 0,
+          "medium": 0,
+          "high": 8
+        }
+      }
+    }
+  },
+  "llm": {
+    "records": [
+      {
+        "id": "backend-01",
+        "job_id": "backend_junior",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "score": 88.0,
+        "predicted_tier": "high",
+        "candidate_name": "Arjun Mehta",
+        "matching_skills": [
+          "Python",
+          "SQL",
+          "REST APIs",
+          "Git",
+          "PostgreSQL",
+          "Flask",
+          "Docker"
+        ],
+        "missing_skills": [],
+        "experience_requirement_met": true,
+        "verdict": "Strong match – meets all required skills and experience.",
+        "parsed_name": "Arjun Mehta",
+        "parsed_email_present": true,
+        "parsed_skill_count": 7,
+        "parsed_experience_years": 2.5,
+        "error": null,
+        "seconds": 6.2
+      },
+      {
+        "id": "backend-02",
+        "job_id": "backend_junior",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "score": 90.0,
+        "predicted_tier": "high",
+        "candidate_name": "Sofia Alvarez",
+        "matching_skills": [
+          "Python",
+          "SQL",
+          "REST APIs",
+          "Git",
+          "relational databases",
+          "Django",
+          "Docker"
+        ],
+        "missing_skills": [],
+        "experience_requirement_met": true,
+        "verdict": "Strong fit for the Junior Backend Developer role.",
+        "parsed_name": "Sofia Alvarez",
+        "parsed_email_present": true,
+        "parsed_skill_count": 6,
+        "parsed_experience_years": 1.5,
+        "error": null,
+        "seconds": 13.6
+      },
+      {
+        "id": "backend-03",
+        "job_id": "backend_junior",
+        "category": "missing_skills",
+        "expected_tier": "medium",
+        "score": 60.0,
+        "predicted_tier": "medium",
+        "candidate_name": "Noah Williams",
+        "matching_skills": [
+          "Python",
+          "SQL",
+          "Git"
+        ],
+        "missing_skills": [
+          "relational databases",
+          "REST APIs"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Meets basic requirements but missing key backend skills; acceptable for junior role with development.",
+        "parsed_name": "Noah Williams",
+        "parsed_email_present": true,
+        "parsed_skill_count": 3,
+        "parsed_experience_years": 1.0,
+        "error": null,
+        "seconds": 17.2
+      },
+      {
+        "id": "backend-04",
+        "job_id": "backend_junior",
+        "category": "transferable_stack",
+        "expected_tier": "medium",
+        "score": 80.0,
+        "predicted_tier": "high",
+        "candidate_name": "Priya Nair",
+        "matching_skills": [
+          "Python",
+          "SQL",
+          "REST APIs",
+          "Git"
+        ],
+        "missing_skills": [
+          "relational databases"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Strong candidate for the Junior Backend Developer role; meets experience and core skills but should strengthen relational database knowledge.",
+        "parsed_name": "Priya Nair",
+        "parsed_email_present": true,
+        "parsed_skill_count": 7,
+        "parsed_experience_years": 3.0,
+        "error": null,
+        "seconds": 19.5
+      },
+      {
+        "id": "backend-05",
+        "job_id": "backend_junior",
+        "category": "under_experienced",
+        "expected_tier": "medium",
+        "score": 77.0,
+        "predicted_tier": "high",
+        "candidate_name": "Daniel Kim",
+        "matching_skills": [
+          "Python",
+          "SQL",
+          "REST APIs",
+          "Git",
+          "PostgreSQL",
+          "SQLite",
+          "Flask"
+        ],
+        "missing_skills": [
+          "Django",
+          "Docker"
+        ],
+        "experience_requirement_met": false,
+        "verdict": "Meets required skills but falls short on experience; suitable for junior role with training.",
+        "parsed_name": "Daniel Kim",
+        "parsed_email_present": true,
+        "parsed_skill_count": 7,
+        "parsed_experience_years": 0.5,
+        "error": null,
+        "seconds": 16.8
+      },
+      {
+        "id": "backend-06",
+        "job_id": "backend_junior",
+        "category": "transferable_stack",
+        "expected_tier": "low",
+        "score": 40.0,
+        "predicted_tier": "medium",
+        "candidate_name": "Marco Rossi",
+        "matching_skills": [
+          "REST APIs",
+          "Git"
+        ],
+        "missing_skills": [
+          "Python",
+          "SQL",
+          "relational databases"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Missing core Python and SQL skills; not a suitable fit for the junior Python backend role.",
+        "parsed_name": "Marco Rossi",
+        "parsed_email_present": true,
+        "parsed_skill_count": 6,
+        "parsed_experience_years": 5.0,
+        "error": null,
+        "seconds": 19.7
+      },
+      {
+        "id": "backend-07",
+        "job_id": "backend_junior",
+        "category": "unrelated_domain",
+        "expected_tier": "low",
+        "score": 30.0,
+        "predicted_tier": "low",
+        "candidate_name": "Emily Chen",
+        "matching_skills": [
+          "Python"
+        ],
+        "missing_skills": [
+          "SQL",
+          "relational databases",
+          "REST APIs",
+          "Git"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Partial match – candidate meets experience but lacks most required technical skills.",
+        "parsed_name": "Emily Chen",
+        "parsed_email_present": true,
+        "parsed_skill_count": 5,
+        "parsed_experience_years": 2.0,
+        "error": null,
+        "seconds": 20.3
+      },
+      {
+        "id": "backend-08",
+        "job_id": "backend_junior",
+        "category": "empty_extraction",
+        "expected_tier": "low",
+        "score": 0.0,
+        "predicted_tier": "low",
+        "candidate_name": null,
+        "matching_skills": [],
+        "missing_skills": [
+          "Python",
+          "SQL",
+          "relational databases",
+          "REST APIs",
+          "Git"
+        ],
+        "experience_requirement_met": false,
+        "verdict": "Candidate does not meet the required skills or experience for the Junior Backend Developer role.",
+        "parsed_name": null,
+        "parsed_email_present": false,
+        "parsed_skill_count": 0,
+        "parsed_experience_years": null,
+        "error": null,
+        "seconds": 7.2
+      },
+      {
+        "id": "data-01",
+        "job_id": "data_analyst",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "score": 100.0,
+        "predicted_tier": "high",
+        "candidate_name": "Rhea Kapoor",
+        "matching_skills": [
+          "SQL",
+          "Excel",
+          "Python",
+          "pandas",
+          "Tableau"
+        ],
+        "missing_skills": [],
+        "experience_requirement_met": true,
+        "verdict": "Strong fit for the Data Analyst role.",
+        "parsed_name": "Rhea Kapoor",
+        "parsed_email_present": true,
+        "parsed_skill_count": 9,
+        "parsed_experience_years": 3.0,
+        "error": null,
+        "seconds": 15.2
+      },
+      {
+        "id": "data-02",
+        "job_id": "data_analyst",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "score": 83.33,
+        "predicted_tier": "high",
+        "candidate_name": "Tom Becker",
+        "matching_skills": [
+          "SQL",
+          "Excel",
+          "Python",
+          "pandas",
+          "data visualization",
+          "Power BI"
+        ],
+        "missing_skills": [
+          "statistics"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Strong match – meets all required skills and experience, with minor preferred skill gap.",
+        "parsed_name": "Tom Becker",
+        "parsed_email_present": true,
+        "parsed_skill_count": 6,
+        "parsed_experience_years": 4.0,
+        "error": null,
+        "seconds": 16.4
+      },
+      {
+        "id": "data-03",
+        "job_id": "data_analyst",
+        "category": "missing_skills",
+        "expected_tier": "medium",
+        "score": 83.0,
+        "predicted_tier": "high",
+        "candidate_name": "Lena Fischer",
+        "matching_skills": [
+          "SQL",
+          "Excel",
+          "Dashboards"
+        ],
+        "missing_skills": [
+          "Python with pandas"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Good fit on experience and core data skills, but lacks Python expertise.",
+        "parsed_name": "Lena Fischer",
+        "parsed_email_present": true,
+        "parsed_skill_count": 4,
+        "parsed_experience_years": 2.0,
+        "error": null,
+        "seconds": 14.8
+      },
+      {
+        "id": "data-04",
+        "job_id": "data_analyst",
+        "category": "under_experienced",
+        "expected_tier": "medium",
+        "score": 80.0,
+        "predicted_tier": "high",
+        "candidate_name": "Omar Haddad",
+        "matching_skills": [
+          "Advanced SQL",
+          "Advanced Excel",
+          "Python with pandas for analysis",
+          "Experience building data visualizations"
+        ],
+        "missing_skills": [],
+        "experience_requirement_met": false,
+        "verdict": "Strong skill match but does not meet the minimum 2‑year experience requirement.",
+        "parsed_name": "Omar Haddad",
+        "parsed_email_present": true,
+        "parsed_skill_count": 5,
+        "parsed_experience_years": 1.5,
+        "error": null,
+        "seconds": 14.0
+      },
+      {
+        "id": "data-05",
+        "job_id": "data_analyst",
+        "category": "missing_skills",
+        "expected_tier": "medium",
+        "score": 85.0,
+        "predicted_tier": "high",
+        "candidate_name": "Isabelle Moreau",
+        "matching_skills": [
+          "Excel",
+          "SQL",
+          "Power BI"
+        ],
+        "missing_skills": [
+          "Python with pandas for analysis"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Good fit – meets experience and most required skills, but lacks Python/pandas expertise.",
+        "parsed_name": "Isabelle Moreau",
+        "parsed_email_present": true,
+        "parsed_skill_count": 4,
+        "parsed_experience_years": 3.0,
+        "error": null,
+        "seconds": 12.1
+      },
+      {
+        "id": "data-06",
+        "job_id": "data_analyst",
+        "category": "unrelated_domain",
+        "expected_tier": "low",
+        "score": 20.0,
+        "predicted_tier": "low",
+        "candidate_name": "Kevin Osei",
+        "matching_skills": [],
+        "missing_skills": [
+          "Advanced SQL",
+          "Advanced Excel",
+          "Python with pandas for analysis",
+          "Experience building data visualizations"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Candidate meets the experience requirement but lacks all core technical skills needed for the Data Analyst role.",
+        "parsed_name": "Kevin Osei",
+        "parsed_email_present": true,
+        "parsed_skill_count": 4,
+        "parsed_experience_years": 2.0,
+        "error": null,
+        "seconds": 17.7
+      },
+      {
+        "id": "data-07",
+        "job_id": "data_analyst",
+        "category": "unrelated_domain",
+        "expected_tier": "low",
+        "score": 25.0,
+        "predicted_tier": "low",
+        "candidate_name": "Mia Johnson",
+        "matching_skills": [
+          "Excel"
+        ],
+        "missing_skills": [
+          "Advanced SQL",
+          "Advanced Excel",
+          "Python with pandas for analysis",
+          "Experience building data visualizations"
+        ],
+        "experience_requirement_met": false,
+        "verdict": "Candidate does not meet the requirements; insufficient experience and missing key technical skills.",
+        "parsed_name": "Mia Johnson",
+        "parsed_email_present": true,
+        "parsed_skill_count": 6,
+        "parsed_experience_years": 1.0,
+        "error": null,
+        "seconds": 17.0
+      },
+      {
+        "id": "data-08",
+        "job_id": "data_analyst",
+        "category": "keyword_stuffing",
+        "expected_tier": "low",
+        "score": 75.0,
+        "predicted_tier": "high",
+        "candidate_name": "Alex Petrov",
+        "matching_skills": [
+          "SQL",
+          "Excel",
+          "Python with pandas",
+          "Data visualizations",
+          "Tableau"
+        ],
+        "missing_skills": [],
+        "experience_requirement_met": false,
+        "verdict": "Strong skill match but does not meet the 2‑year experience requirement.",
+        "parsed_name": "Alex Petrov",
+        "parsed_email_present": true,
+        "parsed_skill_count": 6,
+        "parsed_experience_years": null,
+        "error": null,
+        "seconds": 15.4
+      },
+      {
+        "id": "frontend-01",
+        "job_id": "frontend_senior",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "score": 100.0,
+        "predicted_tier": "high",
+        "candidate_name": "Grace Liu",
+        "matching_skills": [
+          "JavaScript",
+          "React",
+          "HTML",
+          "CSS",
+          "TypeScript",
+          "Next.js",
+          "Jest",
+          "Playwright"
+        ],
+        "missing_skills": [],
+        "experience_requirement_met": true,
+        "verdict": "Strong match – candidate exceeds all requirements.",
+        "parsed_name": "Grace Liu",
+        "parsed_email_present": true,
+        "parsed_skill_count": 8,
+        "parsed_experience_years": 5.0,
+        "error": null,
+        "seconds": 20.3
+      },
+      {
+        "id": "frontend-02",
+        "job_id": "frontend_senior",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "score": 88.0,
+        "predicted_tier": "high",
+        "candidate_name": "Hugo Martins",
+        "matching_skills": [
+          "JavaScript",
+          "React",
+          "HTML",
+          "CSS",
+          "TypeScript",
+          "Playwright"
+        ],
+        "missing_skills": [
+          "Next.js"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Strong match; meets all required criteria and most preferred skills.",
+        "parsed_name": "Hugo Martins",
+        "parsed_email_present": true,
+        "parsed_skill_count": 6,
+        "parsed_experience_years": 3.5,
+        "error": null,
+        "seconds": 14.2
+      },
+      {
+        "id": "frontend-03",
+        "job_id": "frontend_senior",
+        "category": "missing_skills",
+        "expected_tier": "medium",
+        "score": 55.0,
+        "predicted_tier": "medium",
+        "candidate_name": "Anika Rao",
+        "matching_skills": [
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "TypeScript"
+        ],
+        "missing_skills": [
+          "frontend development",
+          "React"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Strong on core web skills but missing React; viable candidate with upskilling.",
+        "parsed_name": "Anika Rao",
+        "parsed_email_present": true,
+        "parsed_skill_count": 5,
+        "parsed_experience_years": 4.0,
+        "error": null,
+        "seconds": 16.1
+      },
+      {
+        "id": "frontend-04",
+        "job_id": "frontend_senior",
+        "category": "under_experienced",
+        "expected_tier": "medium",
+        "score": 40.0,
+        "predicted_tier": "medium",
+        "candidate_name": "Ben Carter",
+        "matching_skills": [
+          "JavaScript",
+          "React",
+          "HTML",
+          "CSS"
+        ],
+        "missing_skills": [
+          "frontend development"
+        ],
+        "experience_requirement_met": false,
+        "verdict": "Insufficient experience and missing a required skill; not a suitable match.",
+        "parsed_name": "Ben Carter",
+        "parsed_email_present": true,
+        "parsed_skill_count": 5,
+        "parsed_experience_years": 2.0,
+        "error": null,
+        "seconds": 14.0
+      },
+      {
+        "id": "frontend-05",
+        "job_id": "frontend_senior",
+        "category": "transferable_stack",
+        "expected_tier": "medium",
+        "score": 60.0,
+        "predicted_tier": "medium",
+        "candidate_name": "Yuki Tanaka",
+        "matching_skills": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "missing_skills": [
+          "frontend development",
+          "React"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Meets experience requirement and has core web skills, but lacks React and broader frontend development experience; moderate fit.",
+        "parsed_name": "Yuki Tanaka",
+        "parsed_email_present": true,
+        "parsed_skill_count": 5,
+        "parsed_experience_years": 6.0,
+        "error": null,
+        "seconds": 11.9
+      },
+      {
+        "id": "frontend-06",
+        "job_id": "frontend_senior",
+        "category": "missing_skills",
+        "expected_tier": "low",
+        "score": 15.0,
+        "predicted_tier": "low",
+        "candidate_name": "Diego Santos",
+        "matching_skills": [
+          "JavaScript"
+        ],
+        "missing_skills": [
+          "frontend development",
+          "React",
+          "HTML",
+          "CSS",
+          "TypeScript",
+          "Next.js",
+          "Automated testing"
+        ],
+        "experience_requirement_met": false,
+        "verdict": "Not a fit – lacks required frontend experience and does not meet the minimum 3‑year experience.",
+        "parsed_name": "Diego Santos",
+        "parsed_email_present": true,
+        "parsed_skill_count": 4,
+        "parsed_experience_years": 1.0,
+        "error": null,
+        "seconds": 15.0
+      },
+      {
+        "id": "frontend-07",
+        "job_id": "frontend_senior",
+        "category": "unrelated_domain",
+        "expected_tier": "low",
+        "score": 20.0,
+        "predicted_tier": "low",
+        "candidate_name": "Rachel Green",
+        "matching_skills": [
+          "HTML"
+        ],
+        "missing_skills": [
+          "frontend development",
+          "JavaScript",
+          "React",
+          "CSS"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Candidate meets the experience threshold but lacks most core frontend skills; not a suitable match for the Senior Frontend Engineer role.",
+        "parsed_name": "Rachel Green",
+        "parsed_email_present": true,
+        "parsed_skill_count": 3,
+        "parsed_experience_years": 3.0,
+        "error": null,
+        "seconds": 16.0
+      },
+      {
+        "id": "frontend-08",
+        "job_id": "frontend_senior",
+        "category": "weak_evidence",
+        "expected_tier": "low",
+        "score": 45.0,
+        "predicted_tier": "medium",
+        "candidate_name": "Victor Huang",
+        "matching_skills": [
+          "HTML",
+          "CSS"
+        ],
+        "missing_skills": [
+          "frontend development",
+          "JavaScript",
+          "React"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Partial match – candidate meets experience but lacks key frontend skills.",
+        "parsed_name": "Victor Huang",
+        "parsed_email_present": true,
+        "parsed_skill_count": 6,
+        "parsed_experience_years": 4.0,
+        "error": null,
+        "seconds": 12.1
+      },
+      {
+        "id": "ml-01",
+        "job_id": "ml_engineer",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "score": 96.0,
+        "predicted_tier": "high",
+        "candidate_name": "Nadia Rahman",
+        "matching_skills": [
+          "Python",
+          "PyTorch",
+          "machine learning",
+          "MLOps",
+          "CI/CD",
+          "AWS",
+          "LLMs"
+        ],
+        "missing_skills": [],
+        "experience_requirement_met": true,
+        "verdict": "Excellent match – meets all required skills and exceeds preferred qualifications.",
+        "parsed_name": "Nadia Rahman",
+        "parsed_email_present": true,
+        "parsed_skill_count": 6,
+        "parsed_experience_years": 5.0,
+        "error": null,
+        "seconds": 17.7
+      },
+      {
+        "id": "ml-02",
+        "job_id": "ml_engineer",
+        "category": "strong_match",
+        "expected_tier": "high",
+        "score": 83.33,
+        "predicted_tier": "high",
+        "candidate_name": "Samir Patel",
+        "matching_skills": [
+          "Python",
+          "TensorFlow",
+          "machine learning",
+          "MLOps",
+          "CI/CD",
+          "deployment",
+          "monitoring",
+          "GCP"
+        ],
+        "missing_skills": [
+          "Experience with LLMs"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Strong match; candidate meets all required skills and experience.",
+        "parsed_name": "Samir Patel",
+        "parsed_email_present": true,
+        "parsed_skill_count": 7,
+        "parsed_experience_years": 3.0,
+        "error": null,
+        "seconds": 12.7
+      },
+      {
+        "id": "ml-03",
+        "job_id": "ml_engineer",
+        "category": "missing_skills",
+        "expected_tier": "medium",
+        "score": 60.0,
+        "predicted_tier": "medium",
+        "candidate_name": "Clara Jensen",
+        "matching_skills": [
+          "Python",
+          "machine learning"
+        ],
+        "missing_skills": [
+          "PyTorch or TensorFlow",
+          "MLOps (model deployment, monitoring, CI/CD)"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Partial match – strong Python and classical ML skills but missing deep learning and MLOps experience.",
+        "parsed_name": "Clara Jensen",
+        "parsed_email_present": true,
+        "parsed_skill_count": 5,
+        "parsed_experience_years": 4.0,
+        "error": null,
+        "seconds": 17.3
+      },
+      {
+        "id": "ml-04",
+        "job_id": "ml_engineer",
+        "category": "under_experienced",
+        "expected_tier": "medium",
+        "score": 60.0,
+        "predicted_tier": "medium",
+        "candidate_name": "Ethan Brooks",
+        "matching_skills": [
+          "Python",
+          "PyTorch",
+          "machine learning"
+        ],
+        "missing_skills": [
+          "Experience with MLOps: model deployment, monitoring, and CI/CD"
+        ],
+        "experience_requirement_met": false,
+        "verdict": "Insufficient experience and education; missing key MLOps skill.",
+        "parsed_name": "Ethan Brooks",
+        "parsed_email_present": true,
+        "parsed_skill_count": 5,
+        "parsed_experience_years": 2.0,
+        "error": null,
+        "seconds": 17.2
+      },
+      {
+        "id": "ml-05",
+        "job_id": "ml_engineer",
+        "category": "transferable_stack",
+        "expected_tier": "medium",
+        "score": 65.0,
+        "predicted_tier": "medium",
+        "candidate_name": "Wei Zhang",
+        "matching_skills": [
+          "Python",
+          "PyTorch",
+          "machine learning"
+        ],
+        "missing_skills": [
+          "Experience with MLOps: model deployment, monitoring, and CI/CD"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Partial fit: strong Python and PyTorch skills with sufficient experience, but missing MLOps expertise and the required master's degree.",
+        "parsed_name": "Wei Zhang",
+        "parsed_email_present": true,
+        "parsed_skill_count": 5,
+        "parsed_experience_years": 6.0,
+        "error": null,
+        "seconds": 18.5
+      },
+      {
+        "id": "ml-06",
+        "job_id": "ml_engineer",
+        "category": "cross_language",
+        "expected_tier": "low",
+        "score": 0.0,
+        "predicted_tier": "low",
+        "candidate_name": "João Silva",
+        "matching_skills": [],
+        "missing_skills": [
+          "Strong Python",
+          "Hands-on experience with PyTorch or TensorFlow",
+          "Solid understanding of classical machine learning",
+          "Experience with MLOps: model deployment, monitoring, and CI/CD"
+        ],
+        "experience_requirement_met": false,
+        "verdict": "Candidate does not meet the required experience or skills for the Machine Learning Engineer position.",
+        "parsed_name": "João Silva",
+        "parsed_email_present": true,
+        "parsed_skill_count": 3,
+        "parsed_experience_years": 2.0,
+        "error": null,
+        "seconds": 13.4
+      },
+      {
+        "id": "ml-07",
+        "job_id": "ml_engineer",
+        "category": "unrelated_domain",
+        "expected_tier": "low",
+        "score": 25.0,
+        "predicted_tier": "low",
+        "candidate_name": "Aisha Bello",
+        "matching_skills": [
+          "Python"
+        ],
+        "missing_skills": [
+          "Hands-on experience with PyTorch or TensorFlow",
+          "Solid understanding of classical machine learning",
+          "Experience with MLOps: model deployment, monitoring, and CI/CD"
+        ],
+        "experience_requirement_met": false,
+        "verdict": "Candidate lacks most required ML skills and does not meet the experience minimum; not a suitable match.",
+        "parsed_name": "Aisha Bello",
+        "parsed_email_present": true,
+        "parsed_skill_count": 4,
+        "parsed_experience_years": 1.0,
+        "error": null,
+        "seconds": 13.0
+      },
+      {
+        "id": "ml-08",
+        "job_id": "ml_engineer",
+        "category": "weak_evidence",
+        "expected_tier": "low",
+        "score": 30.0,
+        "predicted_tier": "low",
+        "candidate_name": "Lucas Meyer",
+        "matching_skills": [
+          "Python",
+          "TensorFlow (tutorials)"
+        ],
+        "missing_skills": [
+          "Hands-on experience with PyTorch or TensorFlow",
+          "Solid understanding of classical machine learning",
+          "Experience with MLOps: model deployment, monitoring, and CI/CD"
+        ],
+        "experience_requirement_met": true,
+        "verdict": "Candidate lacks several critical ML and MLOps skills, making them a poor fit for the role despite meeting the experience threshold.",
+        "parsed_name": "Lucas Meyer",
+        "parsed_email_present": true,
+        "parsed_skill_count": 5,
+        "parsed_experience_years": 4.0,
+        "error": null,
+        "seconds": 14.0
+      }
+    ],
+    "metrics": {
+      "n": 32,
+      "errors": 0,
+      "accuracy": 0.75,
+      "macro_f1": 0.75,
+      "spearman": 0.892,
+      "mean_band_error": 0.281,
+      "severe_errors": 1,
+      "high_false_positives": 1,
+      "per_class": {
+        "low": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.857,
+          "support": 12
+        },
+        "medium": {
+          "precision": 0.778,
+          "recall": 0.583,
+          "f1": 0.667,
+          "support": 12
+        },
+        "high": {
+          "precision": 0.571,
+          "recall": 1.0,
+          "f1": 0.727,
+          "support": 8
+        }
+      },
+      "confusion": {
+        "low": {
+          "low": 9,
+          "medium": 2,
+          "high": 1
+        },
+        "medium": {
+          "low": 0,
+          "medium": 7,
+          "high": 5
+        },
+        "high": {
+          "low": 0,
+          "medium": 0,
+          "high": 8
+        }
+      }
+    }
+  }
+}
