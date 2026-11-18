@@ -163,7 +163,7 @@ The LLM is better on the cases the baseline cannot reason about:
 | `empty_extraction` | 1 | 1.00 | 1.00 |
 | `cross_language` | 1 | 1.00 | 1.00 |
 
-Both systems found all eight strong candidates (high recall = 1.000). The gain is in rejecting the weaker ones: the baseline labeled 17 of 32 candidates `high`, the LLM labeled 14. The LLM still has no way to reach `low` for any non-empty resume: its lowest non-empty score is 40.0, exactly on the medium boundary.
+Both systems found all eight strong candidates (high recall = 1.000). The gain is in rejecting the weaker ones: the baseline labeled 17 of 32 candidates `high`, the LLM labeled 14. The LLM uses the `low` band for clearly unrelated or empty resumes (scores from 0.0 to 30.0), but partially relevant resumes cluster at the 40–45 boundary, which is where two `low` items were misclassified as `medium`.
 
 The baseline is marginally better on `missing_skills` (5/6 vs 4/6) because a missing required skill directly reduces its coverage term, while the LLM sometimes treats 3 of 4 required skills as a strong match.
 
@@ -187,7 +187,7 @@ Every error made by either system is an **over-prediction** — both never place
 1. **Score and verdict disagree.** In five of the eight errors the model explicitly states the missing skill or unmet experience in the verdict, then returns a high-band score anyway. The prompt asks for a score, a boolean, and a verdict, but does not tell the model how they should constrain each other.
 2. **The experience flag is not reflected in the score.** Both under-experience cases return `experience_requirement_met: false` and scores of 77 and 80. The boolean is treated as reporting metadata rather than as a scoring input.
 3. **Professional evidence is not separated from coursework.** The keyword-stuffed new grad lists every required tool and receives 75 despite no job history. The parser's `total_experience_years` is null and the verdict admits the gap, but the skill list dominates.
-4. **No low band for non-empty resumes.** The lowest score for any resume with text is 40.0, so `low` is unreachable unless the resume is empty or all skills are absent. Clear rejects (`backend-06`, `frontend-08`) are pulled up to the medium floor.
+4. **Partial-overlap floor.** The `low` band is reachable: unrelated and empty resumes score 0.0–30.0. But clear rejects with some overlap (`backend-06`, `frontend-08`) land at 40.0–45.0, exactly on the medium boundary. The band boundary is poorly calibrated for partial matches, not unreachable.
 5. **Depth is not modelled.** A primary Java developer who wrote Python scripts gets full Python credit (`backend-04`); a designer's HTML/CSS prototypes earn 3 of 4 required frontend skills (`frontend-05`, correctly medium but for the wrong reason). The model matches mentions, not evidence of ownership.
 
 ### What worked
